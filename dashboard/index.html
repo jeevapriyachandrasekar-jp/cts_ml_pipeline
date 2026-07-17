@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SalesPulse | Revenue Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview"><span class="brand-mark">S</span><span>sales<span>pulse</span></span></a>
+        <nav>
+          <a class="nav-link active" href="index.html"><i>◈</i> Overview</a>
+          <a class="nav-link" href="forecasts.html"><i>↗</i> Forecasts</a>
+          <a class="nav-link" href="performance.html"><i>◌</i> Performance</a>
+          <a class="nav-link" href="customers.html"><i>◎</i> Customers</a>
+        </nav>
+        <div class="model-card">
+          <div class="pulse-dot"></div>
+          <div><b>Models active</b><small>Refreshed Jul 12, 2026</small></div>
+          <span class="model-score">4 / 4</span>
+        </div>
+        <div class="profile"><div class="avatar">JP</div><div><b>Jeevapriya</b><small>Analytics workspace</small></div><button aria-label="More options">•••</button></div>
+      </aside>
+
+      <section class="content">
+        <header>
+          <div class="mobile-brand"><span class="brand-mark">S</span> salespulse</div>
+          <div class="crumb">OPERATIONS <span>/</span> SALES INTELLIGENCE</div>
+          <div class="header-actions"><button class="date-button">◷ Last 30 days <span>⌄</span></button><button class="icon-button" aria-label="Notifications">◌<em></em></button></div>
+        </header>
+
+        <section id="overview" class="hero">
+          <div><p class="eyebrow">GOOD MORNING, JEEVAPRIYA</p><h1>See the signal<br />behind every sale.</h1><p class="subcopy">Your demand models see healthy momentum across every menu category. Here’s what needs your attention today.</p></div>
+          <div class="hero-orb" aria-hidden="true"><span></span><span></span><span></span><b>+18.6%</b><small>sales momentum</small></div>
+        </section>
+
+        <section class="kpis" aria-label="Key performance indicators">
+          <article class="kpi"><div class="kpi-top"><span>Projected revenue</span><i class="trend up">↗ 12.4%</i></div><strong>$2,311</strong><small>Tomorrow across 40 stores</small><div class="mini-bars positive" data-bars="4,6,5,7,8,8,10,12,10,13"></div></article>
+          <article class="kpi"><div class="kpi-top"><span>Demand confidence</span><i class="trend up">↗ 70.8%</i></div><strong>High</strong><small>Product-demand model R² score</small><div class="meter"><span style="width:71%"></span></div></article>
+          <article class="kpi"><div class="kpi-top"><span>At-risk stores</span><i class="trend neutral">40 tracked</i></div><strong>10</strong><small>Bottom-revenue quartile</small><div class="mini-bars warning" data-bars="13,10,11,8,6,7,5,6,4,3"></div></article>
+          <article class="kpi"><div class="kpi-top"><span>Loyal customers</span><i class="trend up">↗ 36.5%</i></div><strong>219</strong><small>High-frequency segment</small><div class="donut"><span>36%</span></div></article>
+        </section>
+
+        <section class="grid-two">
+          <article class="panel revenue-panel"><div class="panel-heading"><div><p class="eyebrow">REVENUE OUTLOOK</p><h2>Daily sales trajectory</h2></div><button class="ghost">Revenue <span>⌄</span></button></div><div class="chart-legend"><span><i class="dot cyan"></i>Actual</span><span><i class="dash"></i>Forecast</span></div><div class="line-chart" id="lineChart" aria-label="Daily revenue trend graph"></div><div class="chart-axis"><span>JUN 13</span><span>JUN 20</span><span>JUN 27</span><span>JUL 04</span><span>JUL 11</span></div></article>
+          <article class="panel action-panel"><div class="panel-heading"><div><p class="eyebrow">AI RECOMMENDATION</p><h2>Focus on breakfast</h2></div><span class="spark">✦</span></div><p>Breakfast has the strongest reliable category signal: <b>+1,160%</b> unit growth over the previous 30 days.</p><div class="action-stat"><span>Top item</span><b>Hotcakes Combo</b><strong>5.7 units</strong></div><button class="primary" data-prompt="What should I do about breakfast demand?">Explore recommendation <span>→</span></button></article>
+        </section>
+
+        <section class="grid-two lower-grid">
+          <article class="panel table-panel"><div class="panel-heading"><div><p class="eyebrow">TOMORROW'S FORECAST</p><h2>Store revenue leaders</h2></div><button class="text-button">View all →</button></div><div class="table"><div class="tr th"><span>STORE</span><span>TYPE</span><span>FORECAST</span></div><div id="storeRows"></div></div></article>
+          <article class="panel categories"><div class="panel-heading"><div><p class="eyebrow">CATEGORY MOMENTUM</p><h2>What customers want</h2></div><button class="text-button" data-prompt="Which menu categories are growing?">Ask AI →</button></div><div id="categoryRows"></div></article>
+        </section>
+
+        <section class="customer-banner"><div><p class="eyebrow">CUSTOMER INTELLIGENCE</p><h2>Two meaningful customer groups surfaced.</h2><p>219 high-frequency customers spend <b>3× more</b> than the rest. Keep them close with rewards and personal offers.</p></div><div class="segment-viz"><div class="ring ring-one"><span>219</span><small>loyal</small></div><div class="ring ring-two"><span>381</span><small>occasional</small></div></div><a class="outline-button" href="customers.html">Explore segments →</a></section>
+      </section>
+    </main>
+
+    <button class="assistant-fab" id="openAssistant"><span>✦</span> Ask Sales AI <kbd>⌘ K</kbd></button>
+    <section class="assistant" id="assistant" aria-label="Sales AI assistant">
+      <div class="assistant-head"><div class="ai-orb">✦</div><div><b>Sales AI</b><small>Grounded in your current outputs</small></div><button id="closeAssistant" aria-label="Close assistant">×</button></div>
+      <div class="messages" id="messages"><div class="message ai">I’ve analysed the latest forecasts, trends, store performance, and customer segments. What would you like to know?</div></div>
+      <div class="suggestions"><button data-prompt="What needs attention today?">What needs attention?</button><button data-prompt="Which products should I stock?">What should I stock?</button><button data-prompt="Explain model performance">Explain model performance</button></div>
+      <form id="assistantForm"><input id="assistantInput" placeholder="Ask about your sales data…" autocomplete="off" /><button aria-label="Send message">↑</button></form>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
